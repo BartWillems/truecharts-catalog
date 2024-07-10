@@ -5,7 +5,7 @@ image:
 rocmImage:
   repository: ollama/ollama
   pullPolicy: IfNotPresent
-  tag: deprecated
+  tag: deprecated@sha256:4a3c5b5261f325580d7f4f6440e5094d807784f0513439dcabfda9c2bdf4191e
 uiImage:
   repository: ghcr.io/open-webui/open-webui
   pullPolicy: IfNotPresent
