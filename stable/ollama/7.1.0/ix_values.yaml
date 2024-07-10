@@ -119,6 +119,12 @@ workload:
             RAG_EMBEDDING_MODEL: "{{ .Values.ollama.rag.model }}"
             RAG_EMBEDDING_MODEL_DEVICE_TYPE: "{{ .Values.ollama.rag.model_device_type }}"
             WEBUI_AUTH_TRUSTED_EMAIL_HEADER: "{{ .Values.ollama.registration.trusted_email_header }}"
+            ENABLE_RAG_LOCAL_WEB_FETCH: True
+            ENABLE_RAG_WEB_SEARCH: "{{ .Values.ollama.web_search.enabled }}"
+            RAG_WEB_SEARCH_ENGINE: "{{ .Values.ollama.web_search.engine }}"
+            RAG_WEB_SEARCH_RESULT_COUNT: "{{ .Values.ollama.web_search.result_count }}"
+            RAG_WEB_SEARCH_CONCURRENT_REQUESTS: "{{ .Values.ollama.web_search.concurrent_requests }}"
+            SEARXNG_QUERY_URL: "{{ .Values.ollama.web_search.searxng_query_url }}"
             # OPENAI_API_BASE_URL
             # OPENAI_API_KEY
             # DEFAULT_MODELS

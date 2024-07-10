@@ -372,7 +372,6 @@ questions:
                                               schema:
                                                 type: string
 
-
   - variable: ollama
     group: App Configuration
     label: Ollama
@@ -419,6 +418,53 @@ questions:
                 schema:
                   type: string
                   default: ""
+        - variable: web_search
+          label: Web Search configuration
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs: [
+              {
+                  "variable": "enabled",
+                  "label": "Enable web search",
+                  "schema": {
+                      "type": "boolean",
+                      "default": false
+                  }
+              },
+              {
+                  "variable": "engine",
+                  "label": "Engine",
+                  "schema": {
+                      "type": "string",
+                      "default": ""
+                  }
+              },
+              {
+                  "variable": "result_count",
+                  "label": "Result Count",
+                  "schema": {
+                      "type": "int",
+                      "default": 3
+                  }
+              },
+              {
+                  "variable": "concurrent_requests",
+                  "label": "Concurrent Requests",
+                  "schema": {
+                      "type": "int",
+                      "default": 10
+                  }
+              },
+              {
+                  "variable": "searxng_query_url",
+                  "label": "SearXNG Query URL",
+                  "schema": {
+                      "type": "string",
+                      "default": ""
+                  }
+              }
+            ]
         - variable: whisper
           label: Whisper Configuration
           schema:
